@@ -31,6 +31,25 @@ Important features include:
 
 The target variable contains **four distinct classes**.
 
+## Model Comparison
+
+Multiple classification models were evaluated on the same validation set:
+
+- Logistic Regression
+- Random Forest
+- K-Nearest Neighbors (KNN)
+- XGBoost
+- LightGBM
+
+The models were compared using **Accuracy and Macro F1 Score**.
+
+The experiments showed that different models performed best depending on the evaluation metric. **XGBoost achieved the strongest validation accuracy, while LightGBM achieved the strongest Macro F1 performance.**
+
+Since the competition involves a multiclass classification problem where performance across individual classes is important, Macro F1 was used as the primary metric for subsequent model selection and hyperparameter tuning.
+
+The top-performing models were then shortlisted for hyperparameter tuning, taking into account the computational and time constraints of the Kaggle competition.
+
+
 ## Approach
 
 The project follows an end-to-end machine learning pipeline:
@@ -55,3 +74,4 @@ Macro F1 Evaluation
 Final Model Training
       ↓
 Test Prediction
+
